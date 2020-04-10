@@ -1,0 +1,31 @@
+{
+  "name": "lit-element-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run serve",
+    "serve": "webpack-dev-server --open --config webpack.dev.js",
+    "build": "webpack --config webpack.prod.js",
+    "build:prod": "webpack --config webpack.prod.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "lit-css-global-scope": "^0.1.1",
+    "lit-element": "^2.3.1"
+  },
+  "devDependencies": {
+    "@webcomponents/webcomponentsjs": "^2.4.3",
+    "copy-webpack-plugin": "^5.1.1",
+    "es-dev-server": "^1.46.0",
+    "eslint": "^6.8.0",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "webpack-merge": "^4.2.2"
+  }
+}
