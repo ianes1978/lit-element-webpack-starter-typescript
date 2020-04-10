@@ -1,10 +1,13 @@
 
-import { LitElement, html, css } from 'lit-element';
+import { LitElement, html, customElement, property,css } from 'lit-element';
 import {globalStyle} from 'lit-css-global-scope'
 
 
-
+@customElement('css-component')
 class cssComponent extends LitElement {
+  @property() myString = "World";
+  @property({ type: Array }) myArray = ["an", "array", "of", "test", "data"];
+  @property({ type: Boolean }) myBool = true;
   static get styles() {
     return [
       globalStyle,
@@ -16,25 +19,7 @@ class cssComponent extends LitElement {
       `
     ];
   }
-  static get properties() {
-    return {
-      myString: { type: String },
-      myArray: { type: Array },
-      myBool: { type: Boolean }
-    };
-  }
-  myString:String;
-  myArray:Array<string>;
-  myBool:Boolean;
 
-
-  constructor() {
-    super();
-    this.myString = 'Hello World';
-    this.myArray = ['an', 'array', 'of', 'test', 'data'];
-    this.myBool = true;
-
-  }
   render() {
     return html`
     <h3>Webcomponent with external style (Bootstrap)</h3>
@@ -61,5 +46,3 @@ class cssComponent extends LitElement {
     `;
   }
 }
-
-customElements.define('css-component', cssComponent);
