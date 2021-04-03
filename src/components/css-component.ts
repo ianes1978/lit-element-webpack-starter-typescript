@@ -8,7 +8,7 @@ class cssComponent extends LitElement {
   @property() myString = "World";
   @property({ type: Array }) myArray = ["an", "array", "of", "test", "data"];
   @property({ type: Boolean }) myBool = true;
-  @globalStyle
+  @globalStyle()
   static get styles() {
     return [
       css`
