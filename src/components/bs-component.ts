@@ -1,10 +1,16 @@
 import { LitElement, html, css, property, customElement } from "lit-element";
-import { globalStyle } from "lit-css-global-scope";
+import { globalStyle } from "../core/decorators";
+
 
 @customElement("bs-component")
 class BsComponent extends LitElement {
+  @globalStyle()
   static get styles() {
-    return [globalStyle, css``];
+    return [ css`
+      .btn-secondary{
+        background-color: violet
+      }
+    `];
   }
   @property() myString = "World";
   @property({ type: Array }) myArray = ["an", "array", "of", "test", "data"];
